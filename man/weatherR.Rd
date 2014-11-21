@@ -6,8 +6,8 @@
 \title{Homework 10 R package: weatherR}
 \description{
 Allows you to access 5 days (i.e. today's and the next four days')
-weather forecast information
-such as temperature in C, temperature in F, Chance of rain, Humidity, Wind, etc in R.
+weather forecast information such as temperature in C, temperature in F,
+Chance of rain, Humidity, Wind, etc in R.
 }
 \details{
 This package accesses worldweatheronline.com to check weather forecast
