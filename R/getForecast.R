@@ -22,8 +22,8 @@
 #' # returns today's weather forecast for Vancouver
 #' getForecast()
 #'
-#' # returns today's weather forecast for Toronto
-#' getForecast("Toronto")
+#' # returns today's weather forecast for Seattle
+#' getForecast("Seattle")
 #'
 #'
 

@@ -33,8 +33,8 @@ case in \code{city} is ignored
 # returns today's weather forecast for Vancouver
 getForecast()
 
-# returns today's weather forecast for Toronto
-getForecast("Toronto")
+# returns today's weather forecast for Seattle
+getForecast("Seattle")
 }
 \keyword{misc}
 

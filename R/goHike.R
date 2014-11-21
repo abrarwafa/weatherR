@@ -29,8 +29,8 @@
 #' # checks if you can go hiking today in Vancouver
 #' goHike()
 #'
-#' # checks if you can go hiking today in Toronto
-#' goHike("Toronto")
+#' # checks if you can go hiking today in Seattle
+#' goHike("Seattle")
 #'
 
 goHike <- function(city = "Vancouver", date = Sys.Date()){
