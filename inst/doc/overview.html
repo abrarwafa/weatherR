@@ -10,7 +10,7 @@
 
 <meta name="author" content="Abrar Wafa" />
 
-<meta name="date" content="2014-11-20" />
+<meta name="date" content="2014-11-21" />
 
 <title>weatherR Package</title>
 
@@ -54,7 +54,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="header">
 <h1 class="title">weatherR Package</h1>
 <h4 class="author"><em>Abrar Wafa</em></h4>
-<h4 class="date"><em>2014-11-20</em></h4>
+<h4 class="date"><em>2014-11-21</em></h4>
 </div>
 
 
@@ -62,7 +62,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h3>About weatherR Package</h3>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(weatherR)</code></pre>
 <p>weatherR package allows you to access 5 days (i.e. today’s and the next four days’) weather forecast information such as temperature in C, temperature in F, Chance of rain, Humidity, Wind, etc in R.</p>
-<p>It accesses worldweatheronline.com to check weather forecast (i.e temperature, chances of rain) for 5 days (today’s or the next four days’), and let you know if you can go hiking on that day based on chances of rain.</p>
+<p>This package accesses worldweatheronline.com to check weather forecast (i.e temperature, chances of rain) for 5 days (today’s or the next four days’), and let you know if you can go hiking on that day based on chances of rain.</p>
 <hr />
 </div>
 <div id="functions-description-and-examples" class="section level2">
@@ -70,23 +70,31 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="getforecastcity-date" class="section level3">
 <h3>getForecast(city, date)</h3>
 <p>This function returns 5 days (today’s and the next four days’) weather information including Temperature in C, Weather Condition and Chances of Rain in percent for any city around the world.</p>
-<p>It takes 2 arguments: - The city you want to check its weather forecast. - The day you want to check its weather forecast.</p>
+<p>It takes 2 arguments:</p>
+<ul>
+<li><p>The city you want to check its weather forecast.</p></li>
+<li><p>The day you want to check its weather forecast.</p></li>
+</ul>
 <p>getForecast() returns data.frame that includes weather information including Temperature in C, Weather Condition and Chances of Rain.</p>
 <p><strong>Examples of usage:</strong></p>
 <p>To check London’s weather forecast for a specific date: <code>getForecast(&quot;London&quot;, &quot;2014-11-29&quot;)</code></p>
 <p>To check today’s weather forecast for Vancouver:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getForecast</span>()</code></pre>
-<pre><code>##   Temperature Condition Precent.chance.of.rain
-## 1           9  Overcast                     24</code></pre>
+<pre><code>##   Temperature  Condition Precent.chance.of.rain
+## 1          10 Light rain                     99</code></pre>
 <p>To check today’s weather forecast for Seattle:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getForecast</span>(<span class="st">&quot;Seattle&quot;</span>)</code></pre>
 <pre><code>##   Temperature Condition Precent.chance.of.rain
-## 1          11  Overcast                     99</code></pre>
+## 1          11  Overcast                      0</code></pre>
 </div>
 <div id="gohikecity-date" class="section level3">
 <h3>goHike(city, date)</h3>
 <p>This function checks if you can go hiking today or on the next four days in any city around the world based on chances of rain.</p>
-<p>It takes two arguments: - The city you want to go Hiking in. - The day you want to go Hiking on.</p>
+<p>It takes two arguments:</p>
+<ul>
+<li><p>The city you want to go Hiking in.</p></li>
+<li><p>The day you want to go Hiking on.</p></li>
+</ul>
 <p>goHike() returns:</p>
 <p>“It’s a lovely day for Hiking! :D” if chances of rain is less than 20 percent,</p>
 <p>“It might rain today! You might want to stay home”, if chances of rain is between 20 percent and 60 percent, and</p>
@@ -95,10 +103,10 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>To check if you can go hiking on a specified date in London: <code>getForecast(&quot;London&quot;, &quot;2014-11-29&quot;)</code></p>
 <p>To check if you can go hiking today in Vancouver:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">goHike</span>()</code></pre>
-<pre><code>## [1] &quot;It might rain today! You might want to stay home&quot;</code></pre>
+<pre><code>## [1] &quot;Ops! It's a rainy day, you better stay home :(&quot;</code></pre>
 <p>To check if you can go hiking today in Seattle:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">goHike</span>(<span class="st">&quot;Seattle&quot;</span>)</code></pre>
-<pre><code>## [1] &quot;Ops! It's a rainy day, you better stay home :(&quot;</code></pre>
+<pre><code>## [1] &quot;It's a lovely day for Hiking! :D&quot;</code></pre>
 </div>
 <div id="getweatherdatacity" class="section level3">
 <h3>getweatherdata(city)</h3>

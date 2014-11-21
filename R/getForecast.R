@@ -10,11 +10,23 @@
 #'
 #'
 #' @param city The city you want to check its weather forecast.
+#' The default value is "Vancouver".
+#'
+#'
 #' @param date The day you want to check its weather forecast.
+#' The default value is today's date. Please mind time zone difference.
+#'
+#'
 #' @return \code{getForecast} returns \code{data.frame} that includes weather information
 #' including Temperature in C, Weather Condition and Chances of Rain.
+#'
 #' @keywords misc
+#'
 #' @note case in \code{city} is ignored
+#'
+#' Make sure the entered \code{city} is spelled correctly.
+#' As for cities that are composed of two or more words,
+#' add underscore between each word (e.g. "Los_Angeles").
 #'
 #' \code{date} should be today's or one of the next four days' date in "yyyy-mm-dd" formate
 #' @export

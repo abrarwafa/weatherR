@@ -18,7 +18,7 @@ library(weatherR)
 weatherR package allows you to access 5 days (i.e. today's and the next four days') weather forecast information such as temperature in C, temperature in F,
 Chance of rain, Humidity, Wind, etc in R.
 
-It accesses worldweatheronline.com to check weather forecast (i.e temperature, chances of rain) for 5 days (today's or the next four days'), and let you know if you can go hiking on that day based on chances of rain.
+This package accesses worldweatheronline.com to check weather forecast (i.e temperature, chances of rain) for 5 days (today's or the next four days'), and let you know if you can go hiking on that day based on chances of rain.
 
 ***
 
@@ -30,7 +30,9 @@ This function returns 5 days (today's and the next four days') weather informati
 including Temperature in C, Weather Condition and Chances of Rain in percent for any city around the world.
 
 It takes 2 arguments: 
+
 - The city you want to check its weather forecast.
+
 - The day you want to check its weather forecast.
 
 
@@ -60,7 +62,9 @@ This function checks if you can go hiking today or on the next four days
 in any city around the world based on chances of rain.
 
 It takes two arguments:
+
 - The city you want to go Hiking in.
+
 - The day you want to go Hiking on.
 
 goHike() returns:

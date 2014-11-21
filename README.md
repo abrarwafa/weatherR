@@ -3,7 +3,7 @@
 weatherR package allows you to access 5 days (i.e. today's and the next four days') weather forecast information such as temperature in C, temperature in F,
 Chance of rain, Humidity, Wind, etc in R.
 
-It accesses worldweatheronline.com to check weather forecast (i.e temperature, chances of rain) for 5 days (today's or the next four days'), and let you know if you can go hiking on that day based on chances of rain.
+This package accesses worldweatheronline.com to check weather forecast (i.e temperature, chances of rain) for 5 days (today's or the next four days'), and let you know if you can go hiking on that day based on chances of rain.
 
 ***
 
@@ -56,7 +56,13 @@ getForecast("London", "2014-11-29")
 
 ### Notes
 
-Please mind time zone difference (check the vignette for more details)
+- The two functions take two arguments, which should be enclosed between double quotation, *city* and *date*. Their default values are *city = "Vancouver"* and *date = Sys.date()* which is today's date. 
+
+- For *city* argument, make sure the entered city is spelled correctly. As for cities that are composed of two or more words, add underscore between each word (e.g. "Los_Angeles").
+
+- On the other hand, *date* argument should be entered in "yyyy-mm-dd" format (e.g. "2014-11-26").
+
+- If you are to use the default date, which is today's date, please mind time zone difference *check the __Reflections__ in [vignette](https://github.com/abrarwafa/weatherR/blob/master/vignettes/overview.md) for more details*.
 
 
 

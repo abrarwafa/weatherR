@@ -6,9 +6,11 @@
 getForecast(city = "Vancouver", date = Sys.Date())
 }
 \arguments{
-\item{city}{The city you want to check its weather forecast.}
+\item{city}{The city you want to check its weather forecast.
+The default value is "Vancouver".}
 
-\item{date}{The day you want to check its weather forecast.}
+\item{date}{The day you want to check its weather forecast.
+The default value is today's date. Please mind time zone difference.}
 }
 \value{
 \code{getForecast} returns \code{data.frame} that includes weather information
@@ -26,6 +28,10 @@ by firing up your web browser.
 }
 \note{
 case in \code{city} is ignored
+
+Make sure the entered \code{city} is spelled correctly.
+As for cities that are composed of two or more words,
+add underscore between each word (e.g. "Los_Angeles").
 
 \code{date} should be today's or one of the next four days' date in "yyyy-mm-dd" formate
 }

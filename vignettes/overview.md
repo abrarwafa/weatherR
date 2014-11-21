@@ -6,8 +6,8 @@ weatherR package allows you to access 5 days (i.e. today's and the next
 four days') weather forecast information such as temperature in C,
 temperature in F, Chance of rain, Humidity, Wind, etc in R.
 
-It accesses worldweatheronline.com to check weather forecast (i.e
-temperature, chances of rain) for 5 days (today's or the next four
+This package accesses worldweatheronline.com to check weather forecast
+(i.e temperature, chances of rain) for 5 days (today's or the next four
 days'), and let you know if you can go hiking on that day based on
 chances of rain.
 
@@ -22,8 +22,11 @@ This function returns 5 days (today's and the next four days') weather
 information including Temperature in C, Weather Condition and Chances of
 Rain in percent for any city around the world.
 
-It takes 2 arguments: - The city you want to check its weather forecast.
-- The day you want to check its weather forecast.
+It takes 2 arguments:
+
+-   The city you want to check its weather forecast.
+
+-   The day you want to check its weather forecast.
 
 getForecast() returns data.frame that includes weather information
 including Temperature in C, Weather Condition and Chances of Rain.
@@ -37,23 +40,26 @@ To check today's weather forecast for Vancouver:
 
     getForecast()
 
-    ##   Temperature Condition Precent.chance.of.rain
-    ## 1           9  Overcast                     24
+    ##   Temperature  Condition Precent.chance.of.rain
+    ## 1          10 Light rain                     99
 
 To check today's weather forecast for Seattle:
 
     getForecast("Seattle")
 
     ##   Temperature Condition Precent.chance.of.rain
-    ## 1          11  Overcast                     99
+    ## 1          11  Overcast                      0
 
 ### goHike(city, date)
 
 This function checks if you can go hiking today or on the next four days
 in any city around the world based on chances of rain.
 
-It takes two arguments: - The city you want to go Hiking in. - The day
-you want to go Hiking on.
+It takes two arguments:
+
+-   The city you want to go Hiking in.
+
+-   The day you want to go Hiking on.
 
 goHike() returns:
 
@@ -74,13 +80,13 @@ To check if you can go hiking today in Vancouver:
 
     goHike()
 
-    ## [1] "It might rain today! You might want to stay home"
+    ## [1] "Ops! It's a rainy day, you better stay home :("
 
 To check if you can go hiking today in Seattle:
 
     goHike("Seattle")
 
-    ## [1] "Ops! It's a rainy day, you better stay home :("
+    ## [1] "It's a lovely day for Hiking! :D"
 
 ### getweatherdata(city)
 

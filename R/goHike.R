@@ -9,7 +9,10 @@
 #' by firing up your web browser.
 #'
 #' @param city The city you want to go Hiking in.
+#' The default value is "Vancouver".
+#'
 #' @param date The day you want to go Hiking on.
+#' The default value is today's date. Please mind time zone difference.
 #'
 #' @return \code{goHike} returns
 #'
@@ -22,6 +25,10 @@
 #' \code{"Ops! It's a rainy day, you better stay home :("} otherwise.
 #' @keywords misc
 #' @note case in \code{city} is ignored
+#'
+#' Make sure the entered \code{city} is spelled correctly.
+#' As for cities that are composed of two or more words,
+#' add underscore between each word (e.g. "Los_Angeles").
 #'
 #' \code{date} should be today's or one of the next four days' date in "yyyy-mm-dd" formate
 #' @export
