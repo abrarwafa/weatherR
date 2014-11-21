@@ -45,7 +45,7 @@ To check today's weather forecast for Vancouver:
 ```R
 getForecast()
 ```
-To check Toronto's weather forecast for a specific date:
+To check Toronto's weather forecast for a specific date (the date should be either today's date or one of the next four days'):
 ```R
 getForecast("Toronto", "2014-11-29")
 ```
@@ -55,7 +55,7 @@ To check if you can go hiking today in Vancouver:
 goHike()
 ```
 
-To check if you can go hiking on a specified date in London: 
+To check if you can go hiking on a specified date in London (the date should be either today's date or one of the next four days'): 
 ```R
 getForecast("London", "2014-11-29")
 ```
