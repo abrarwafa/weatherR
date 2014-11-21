@@ -10,5 +10,5 @@
 #'
 #'
 #' @docType package
-#' @name weather
+#' @name weatherR
 NULL
