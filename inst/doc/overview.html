@@ -84,8 +84,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 ## 1          10 Light rain                     99</code></pre>
 <p>To check today’s weather forecast for Seattle:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getForecast</span>(<span class="st">&quot;Seattle&quot;</span>)</code></pre>
-<pre><code>##   Temperature Condition Precent.chance.of.rain
-## 1          11  Overcast                      0</code></pre>
+<pre><code>##   Temperature  Condition Precent.chance.of.rain
+## 1          12 Light rain                      0</code></pre>
 </div>
 <div id="gohikecity-date" class="section level3">
 <h3>goHike(city, date)</h3>
@@ -144,7 +144,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><p>I had a similar problem with checking the date range since the weather forecast data is only available for 5 days. However, I managed to solve it by writing the <code>checkDate()</code> function.</p></li>
 <li><p>To check the date argument format of my functions, I first tried to use <code>as.Date</code> with <code>stopifnot</code>, but it was giving me an error since <code>as.Date</code> does not return a logical. Then I noticed that it returns <code>NA</code> if the date was wrong. So I used <code>is.na</code> along with <code>if stop</code> statement.</p></li>
 <li><p>Another problem I encountered, was not being able to get <code>roxygen2</code> to update the <code>NAMESPACE</code> file, in the sense that every time I run <code>devtools::document()</code>, I would get a warning message stating that <code>NAMESPACE</code> was not updated. I tired different things and looked online but couldn’t find any solution. Thus, I decided to re-build my package from scratch and oddly it worked.</p></li>
-<li><p>Finally, the last problem I faced was getting an error every time I run <code>check()</code> stating that vignette failed to find the functions I wrote in order to run the examples. I ended up adding loading my package at the beginning of this document using <code>library(weatherR)</code> to solve this problem.</p></li>
+<li><p>One of the problems I faced was getting an error every time I run <code>devtools::check()</code> stating that vignette failed to find the functions I wrote in order to run the examples. I ended up adding loading my package at the beginning of this document using <code>library(weatherR)</code> to solve this problem.</p></li>
+<li><p>Finally, after installing my package from github on another device, and while trying to view the vignette using <code>vignette(&quot;overview&quot;, &quot;weatherR&quot;)</code>, I got an error that <code>No vignettes found by vignette(&quot;overview&quot;, &quot;weatherR&quot;)</code>. I followed Dean’s advice in <a href="https://github.com/STAT545-UBC/Discussion/issues/66">Link to Vignettes</a> issue and removed inst/doc form .gitigonre. and it worked fine.</p></li>
 </ul>
 </div>
 

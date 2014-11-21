@@ -20,7 +20,10 @@ install_github("abrarwafa/weatherR")
 
 ### Getting started
 
-To get started, read the weatherR [vignette](https://github.com/abrarwafa/weatherR/blob/master/vignettes/overview.md).
+To get started, read the weatherR [vignette](https://github.com/abrarwafa/weatherR/blob/master/vignettes/overview.md) or view it using:
+```R
+vignette("overview", "weatherR")
+```
 
 You can then go a head and load the pacakge using:
 

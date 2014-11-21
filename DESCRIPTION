@@ -1,6 +1,6 @@
 Package: weatherR
 Title: Allows you to access current weather and next 4 days weather data in R
-Version: 0.0.9000
+Version: 1.0.0
 Authors@R: "Abrar Wafa <abrarwafa89@gmail.com> [aut, cre]"
 Description: Access worldweatheronline.com to check for today's or the next
     four days' weather conditions (i.e tempreture, chances of rain), and let
