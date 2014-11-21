@@ -152,6 +152,6 @@ To check internet connection: `internet_connection()`
 
 - Another problem I encountered, was not being able to get `roxygen2` to update the `NAMESPACE` file, in the sense that every time I run `devtools::document()`, I would get a warning message stating that `NAMESPACE` was not updated. I tired different things and looked online but couldn't find any solution. Thus, I decided to re-build my package from scratch and oddly it worked. 
 
-- One of the problems I faced was getting an error every time I run `devtools::check()` stating that vignette failed to find the functions I wrote in order to run the examples. I ended up adding loading my package at the beginning of this document using `library(weatherR)` to solve this problem.  
+- One of the problems I faced was getting an error every time I run `devtools::check()` stating that vignette failed to find the functions I wrote in order to run the examples. I ended up loading my package at the beginning of this document using `library(weatherR)` to solve this problem.  
 
 - Finally, after installing my package from github on another device, and while trying to view the vignette using `vignette("overview", "weatherR")`, I got an error that `No vignettes found by vignette("overview", "weatherR")`. I followed Dean's advice in [Link to Vignettes](https://github.com/STAT545-UBC/Discussion/issues/66) issue and removed inst/doc form .gitigonre. and it worked fine.

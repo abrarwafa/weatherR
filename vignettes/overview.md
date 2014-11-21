@@ -174,8 +174,8 @@ Reflections
 
 -   One of the problems I faced was getting an error every time I run
     `devtools::check()` stating that vignette failed to find the
-    functions I wrote in order to run the examples. I ended up adding
-    loading my package at the beginning of this document using
+    functions I wrote in order to run the examples. I ended up loading
+    my package at the beginning of this document using
     `library(weatherR)` to solve this problem.
 
 -   Finally, after installing my package from github on another device,
