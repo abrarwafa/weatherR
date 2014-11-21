@@ -16,12 +16,6 @@ This function returns 5 days (today's and the next four days') weather informati
 such as temperature in C, temperature in F, Chance of rain, Humidity, Wind, etc
 for any city around the world.
 }
-\details{
-If you want to check the weather information for today or the next 4 days
-for any city around the world, you don't have to go browse the Forecast news.
-Instead, You can now ask R directly, without tempting yourself
-by firing up your web browser.
-}
 \note{
 case in \code{city} is ignored
 }

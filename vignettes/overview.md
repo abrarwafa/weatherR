@@ -6,6 +6,11 @@ weatherR package allows you to access 5 days (i.e. today's and the next
 four days') weather forecast information such as temperature in C,
 temperature in F, Chance of rain, Humidity, Wind, etc in R.
 
+If you want to check the weather information for today or the next 4
+days for any city around the world, you don't have to go browse the
+Forecast news. Instead, You can now ask R directly, without tempting
+yourself by firing up your web browser.
+
 This package accesses worldweatheronline.com to check weather forecast
 (i.e temperature, chances of rain) for 5 days (today's or the next four
 days'), and let you know if you can go hiking on that day based on
@@ -47,8 +52,8 @@ To check today's weather forecast for Seattle:
 
     getForecast("Seattle")
 
-    ##   Temperature Condition Precent.chance.of.rain
-    ## 1          11  Overcast                      0
+    ##   Temperature  Condition Precent.chance.of.rain
+    ## 1          12 Light rain                      0
 
 ### goHike(city, date)
 
@@ -167,8 +172,16 @@ Reflections
     online but couldn't find any solution. Thus, I decided to re-build
     my package from scratch and oddly it worked.
 
--   Finally, the last problem I faced was getting an error every time I
-    run `check()` stating that vignette failed to find the functions I
-    wrote in order to run the examples. I ended up adding loading my
-    package at the beginning of this document using `library(weatherR)`
-    to solve this problem.
+-   One of the problems I faced was getting an error every time I run
+    `devtools::check()` stating that vignette failed to find the
+    functions I wrote in order to run the examples. I ended up adding
+    loading my package at the beginning of this document using
+    `library(weatherR)` to solve this problem.
+
+-   Finally, after installing my package from github on another device,
+    and while trying to view the vignette using
+    `vignette("overview", "weatherR")`, I got an error that
+    `No vignettes found by vignette("overview", "weatherR")`. I followed
+    Dean's advice in [Link to
+    Vignettes](https://github.com/STAT545-UBC/Discussion/issues/66)
+    issue and removed inst/doc form .gitigonre. and it worked fine.

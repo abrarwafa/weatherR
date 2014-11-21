@@ -4,10 +4,6 @@
 #' such as temperature in C, temperature in F, Chance of rain, Humidity, Wind, etc
 #' for any city around the world.
 #'
-#' If you want to check the weather information for today or the next 4 days
-#' for any city around the world, you don't have to go browse the Forecast news.
-#' Instead, You can now ask R directly, without tempting yourself
-#' by firing up your web browser.
 #'
 #'
 #' @param city The city you want to retrieve its weather data
